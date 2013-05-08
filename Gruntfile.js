@@ -24,9 +24,10 @@ module.exports = function (grunt) {
 		},
 		bowerbuster: {
 			options: {
-				exclude: ['underscore']
+			    exclude: ['underscore']
 			},
 			standard: {
+                            path: "tmp/bowerbuster.json"
 			}
 		}
 	});
@@ -47,7 +48,7 @@ module.exports = function (grunt) {
 		'clean',
 		'mkdir:tmp',
 		'bower-install',
-		'bower',
+		'bowerbuster',
 		'nodeunit',
 		'clean'
 	]);
