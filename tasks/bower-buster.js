@@ -23,9 +23,7 @@ module.exports = function (grunt) {
 			    delete obj[key];
 			    return;
 			}
-                        
-			obj[key] = grunt.file.isDir(val) ? val : val.replace(/\.js$/, '');
-		    });
+                    });
                     
                     // convert into array useful to buster.js sources config
                     for (var propertyName in data) {
