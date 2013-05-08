@@ -1,38 +1,37 @@
 {
-  "name": "grunt-bower-requirejs",
+  "name": "grunt-bower-busterjs",
   "version": "0.4.2",
-  "description": "Automagically wire-up installed Bower components into your RequireJS config",
+  "description": "Automagically wire-up installed Bower components into your Buster.JS config",
   "keywords": [
     "gruntplugin",
     "bower",
-    "requirejs",
+    "buster",
     "rjs",
     "config"
   ],
-  "homepage": "https://github.com/yeoman/grunt-bower-hooks",
-  "bugs": "https://github.com/yeoman/grunt-bower-hooks/issues",
+  "homepage": "https://github.com/faassen/grunt-bower-busterjs",
+  "bugs": "https://github.com/faassen/grunt-bower-busterjs/issues",
   "author": {
-    "name": "Sindre Sorhus",
-    "email": "sindresorhus@gmail.com",
-    "url": "http://sindresorhus.com"
+    "name": "Martijn Faassen",
+    "email": "faassen@startifact.com",
+    "url": "http://blog.startifact.com"
   },
   "contributors": [
     {
-      "name": "Merrick Christensen",
-      "email": "merrick.christensen@gmail.com",
-      "url": "http://merrickchristensen.com"
+      "name": "Balazs Ree",
+      "email": "ree@greenfinity.hu",
+      "url": "http://greenfinity.hu"
     }
   ],
   "main": "Gruntfile.js",
   "repository": {
     "type": "git",
-    "url": "git://github.com/yeoman/grunt-bower-hooks.git"
+    "url": "git://github.com/faassen/grunt-bower-busterjs.git"
   },
   "scripts": {
     "test": "grunt test"
   },
   "dependencies": {
-    "requirejs": "~2.1.5"
   },
   "devDependencies": {
     "matchdep": "~0.1.1",

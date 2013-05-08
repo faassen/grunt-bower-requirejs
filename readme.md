@@ -1,20 +1,21 @@
-# grunt-bower-requirejs [![Build Status](https://secure.travis-ci.org/yeoman/grunt-bower-requirejs.png?branch=master)](http://travis-ci.org/yeoman/grunt-bower-requirejs)
+# grunt-bower-busterjs
 
-Automagically wire-up installed Bower components into your RequireJS config
+Automagically wire-up installed Bower components into your Buster.JS config
 
+Adapted from grunt-bower-requirejs which does the same for RequireJS. Thanks!
 
 ## Getting Started
 
 If you haven't used [grunt][] before, be sure to check out the [Getting Started][] guide, as it explains how to create a [gruntfile][Getting Started] as well as install and use grunt plugins. Once you're familiar with that process, install this plugin with this command:
 
 ```shell
-npm install grunt-bower-requirejs --save-dev
+npm install grunt-bower-busterjs --save-dev
 ```
 
 Once the plugin has been installed, it may be enabled inside your Gruntfile with this line of JavaScript:
 
 ```js
-grunt.loadNpmTasks('grunt-bower-requirejs');
+grunt.loadNpmTasks('grunt-bower-busterjs');
 ```
 
 [grunt]: http://gruntjs.com
@@ -25,14 +26,14 @@ grunt.loadNpmTasks('grunt-bower-requirejs');
 
 ```js
 grunt.initConfig({
-	bower: {
+	bowerbuster: {
 		target: {
-			rjsConfig: 'app/config.js'
+			sources: 'bowerbuster.json'
 		}
 	}
 });
 
-grunt.loadNpmTasks('grunt-bower-requirejs');
+grunt.loadNpmTasks('grunt-bower-busterjs');
 
 grunt.registerTask('default', ['bower']);
 ```
@@ -40,9 +41,12 @@ grunt.registerTask('default', ['bower']);
 
 ## Documentation
 
-When the `bower` task is run it merges the paths of installed Bower components into the `paths` property of your RequireJS config.
+When the `bower` task is run it merges the paths of installed Bower
+components into a JSON file that can be loaded into your Buster.JS
+config.
 
-You trigger this task from another task in your Gruntfile or through the CLI: `grunt bower`
+You trigger this task from another task in your Gruntfile or through
+the CLI: `grunt bower`
 
 
 ### rjsConfig
