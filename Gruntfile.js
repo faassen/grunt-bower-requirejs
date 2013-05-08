@@ -19,30 +19,14 @@ module.exports = function (grunt) {
 				'components'
 			]
 		},
-		copy: {
-			test: {
-				files: {
-					'tmp/config.js': 'test/fixtures/config.js',
-					'tmp/global-config.js': 'test/fixtures/global-config.js',
-					'tmp/baseurl-config.js': 'test/fixtures/baseurl-config.js'
-				}
-			}
-		},
 		nodeunit: {
 			tasks: ['test/*_test.js']
 		},
-		bower: {
+		bowerbuster: {
 			options: {
 				exclude: ['underscore']
 			},
 			standard: {
-				rjsConfig: 'tmp/config.js'
-			},
-			global: {
-				rjsConfig: 'tmp/global-config.js'
-			},
-			baseUrl: {
-				rjsConfig: 'tmp/baseurl-config.js'
 			}
 		}
 	});
@@ -62,7 +46,6 @@ module.exports = function (grunt) {
 	grunt.registerTask('test', [
 		'clean',
 		'mkdir:tmp',
-		'copy',
 		'bower-install',
 		'bower',
 		'nodeunit',
