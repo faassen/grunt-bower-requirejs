@@ -59,22 +59,22 @@ with the installed Bower components in it.
 
 This file can then be loaded in your buster.js:
 
-``js
+```js
 var fs = require('fs');
 
 var sources = JSON.parse(fs.readFileSync('bowerbuster.json', 'utf8'));
 sources.push('src/**/*.js'); // add local sources under test
-``
+```
 
 and then use these sources in the buster config:
 
-``js
+```js
 config["my tests"] = {
   ...
   sources: sources
   ...
 };
-``
+```
 
 You trigger this task from another task in your Gruntfile or through
 the CLI: `grunt bowerbuster`
